@@ -1,0 +1,46 @@
+Geek is very fond of patterns. Once, his teacher gave him a star pattern to solve. He gave Geek an integer n and asked him to build a pattern.
+
+Help Geek to build a star pattern.
+
+ 
+
+Example 1:
+    * 
+   * * 
+  * * * 
+ * * * * 
+* * * * * 
+* * * * * 
+ * * * * 
+  * * * 
+   * * 
+    * 
+
+
+Your Task:
+
+You don't need to input anything. Complete the function printDiamond() which takes  an integer n  as the input parameter and print the pattern.
+
+Constraints:
+
+1<= N <= 20
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+class Solution:
+    def printTriangle(self, N):
+        # Code here
+        for i in range(1,N+1):
+            print(" "*(N-i),end= "")
+            print("* "*(i))
+            
+        for j in range(1,N+1):
+            print(" "*(j-1),end="")
+            print("* "*(N+1-j))
