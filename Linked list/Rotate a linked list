@@ -1,0 +1,20 @@
+class Solution:
+    
+    #Function to rotate a linked list.
+    def rotate(self, head, k):
+        # code here
+        newHead = head
+        for i in range(k):
+            if i==k-1:
+                last = newHead
+            if newHead.next==None:
+                return head
+            newHead = newHead.next
+        curr = newHead
+        while curr.next!=None:
+            curr=curr.next
+        curr.next = head
+        head = newHead
+        last.next = None
+    
+        return head
